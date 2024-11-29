@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			http-equiv="X-UA-Compatible"
+			content="IE=edge" />
+		<meta
+			http-equiv="X-UA-Compatible"
+			content="IE=7" />
+
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+		<meta
+			name="application-name"
+			content="Track Elite" />
+
+		<link
+			rel="stylesheet"
+			href="../css/animation.css" />
+		<link
+			rel="stylesheet"
+			href="../css/gen.css" />
+		<link
+			rel="stylesheet"
+			href="../css/payment.css" />
+
+		<link
+			rel="apple-touch-icon"
+			href="../src/svg/favicon.svg" />
+		<link
+			rel="shortcut icon"
+			href="../src/svg/favicon.svg"
+			type="image/x-icon/svg" />
+
+		<script
+			defer
+			src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
+
+		<script
+			defer
+			src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js"></script>
+		<link
+			rel="preconnect"
+			href="https://fonts.googleapis.com" />
+		<link
+			rel="preconnect"
+			href="https://fonts.gstatic.com"
+			crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+			rel="stylesheet" />
+
+		<title>Track Elite || Payment</title>
+	</head>
+	<body
+		translate="yes"
+		class="fadeIn">
+		<div id="google_translate_element"></div>
+		<div class="circle leftIntro"></div>
+		<div class="circle1 rightIntro"></div>
+		<div class="circle2 leftIntro"></div>
+		<div class="circle4 leftIntro"></div>
+		<div class="circle5 rightIntro"></div>
+		<div class="body-div">
+			<!-- web header  -->
+			<header>
+				<!-- website logo  -->
+				<div class="logoDiv">
+					<div class="logo">
+						<svg
+							width="80px"
+							height="80px"
+							viewBox="0 0 76 76"
+							class="logo-plane">
+							<path
+								d="M 60.1666,38L 60.0776,38C 60.0776,38 61.254,39.9002 47.2749,40.6107L 43.6589,45.9167L 44.2443,45.9167C 45.1187,45.9167 45.8276,46.6256 45.8276,47.5C 45.8276,48.3745 45.1187,49.0834 44.2443,49.0834L 41.4144,49.0834L 39.673,51.4584L 39.8901,51.4584C 40.7645,51.4584 41.4734,52.1672 41.4734,53.0417C 41.4734,53.9161 40.7645,54.625 39.8901,54.625L 37.2359,54.625C 35.1849,57.1943 33.2902,59.2888 31.9734,60.1667C 31.9734,60.1667 29.2026,60.1667 29.2026,58.5833C 29.2026,58.5833 35.6397,46.782 37.9164,40.8418C 23.6609,40.9597 23.6609,39.9792 23.6609,39.9792C 23.6609,39.9792 20.4943,45.9167 17.3276,45.9167L 19.7026,38L 19.7917,38L 17.4167,30.0833C 20.5833,30.0833 23.75,36.0208 23.75,36.0208C 23.75,36.0208 23.75,35.0403 38.0055,35.1582C 35.7288,29.218 29.2917,17.4167 29.2917,17.4167C 29.2917,15.8333 32.0625,15.8334 32.0625,15.8334C 33.3792,16.7112 35.2739,18.8058 37.325,21.375L 39.9792,21.375C 40.8536,21.375 41.5625,22.0839 41.5625,22.9583C 41.5625,23.8328 40.8536,24.5417 39.9792,24.5417L 39.7621,24.5417L 41.5034,26.9167L 44.3333,26.9167C 45.2078,26.9167 45.9167,27.6255 45.9167,28.5C 45.9167,29.3744 45.2078,30.0833 44.3333,30.0833L 43.7479,30.0833L 47.3639,35.3893C 61.343,36.0998 60.1666,38 60.1666,38 Z " />
+						</svg>
+						<div class="logo-name">
+							<h1 class="logo-text spread">Track <span>Elite</span></h1>
+							<hr />
+							<p class="shipment">SHIPMENT</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- Website Navigation or Menu  -->
+				<nav class="web-menu">
+					<ul class="ls-ul">
+						<a
+							title="Home"
+							href="../html/home.html"
+							class="home">
+							<div class="nav-div">
+								<!-- svg icon  -->
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="25"
+									height="25"
+									fill="#0054ca"
+									class="bi bi-house-door-fill"
+									viewBox="0 0 16 16">
+									<path
+										d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5Z" />
+								</svg>
+								<p class="nav-text">HOME</p>
+							</div>
+						</a>
+
+						<a
+							title="Track"
+							href="../html/home.html#track"
+							target="_parent">
+							<div class="nav-div">
+								<!-- SVG ICON -->
+								<svg
+									width="30px"
+									height="30px"
+									viewBox="0 0 76 76">
+									<path
+										fill-opacity="1"
+										fill="#0054ca"
+										stroke-width="0.2"
+										stroke-anejoin="round"
+										d="M 60.1666,38L 60.0776,38C 60.0776,38 61.254,39.9002 47.2749,40.6107L 43.6589,45.9167L 44.2443,45.9167C 45.1187,45.9167 45.8276,46.6256 45.8276,47.5C 45.8276,48.3745 45.1187,49.0834 44.2443,49.0834L 41.4144,49.0834L 39.673,51.4584L 39.8901,51.4584C 40.7645,51.4584 41.4734,52.1672 41.4734,53.0417C 41.4734,53.9161 40.7645,54.625 39.8901,54.625L 37.2359,54.625C 35.1849,57.1943 33.2902,59.2888 31.9734,60.1667C 31.9734,60.1667 29.2026,60.1667 29.2026,58.5833C 29.2026,58.5833 35.6397,46.782 37.9164,40.8418C 23.6609,40.9597 23.6609,39.9792 23.6609,39.9792C 23.6609,39.9792 20.4943,45.9167 17.3276,45.9167L 19.7026,38L 19.7917,38L 17.4167,30.0833C 20.5833,30.0833 23.75,36.0208 23.75,36.0208C 23.75,36.0208 23.75,35.0403 38.0055,35.1582C 35.7288,29.218 29.2917,17.4167 29.2917,17.4167C 29.2917,15.8333 32.0625,15.8334 32.0625,15.8334C 33.3792,16.7112 35.2739,18.8058 37.325,21.375L 39.9792,21.375C 40.8536,21.375 41.5625,22.0839 41.5625,22.9583C 41.5625,23.8328 40.8536,24.5417 39.9792,24.5417L 39.7621,24.5417L 41.5034,26.9167L 44.3333,26.9167C 45.2078,26.9167 45.9167,27.6255 45.9167,28.5C 45.9167,29.3744 45.2078,30.0833 44.3333,30.0833L 43.7479,30.0833L 47.3639,35.3893C 61.343,36.0998 60.1666,38 60.1666,38 Z " />
+								</svg>
+								<p class="nav-text">TRACK</p>
+							</div>
+						</a>
+
+						<a
+							title="Payment"
+							href="../html/payment.html"
+							class="active"
+							target="_parent">
+							<div class="nav-div">
+								<!-- svg icon  -->
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="16"
+									height="16"
+									fill="#0054ca"
+									class="bi bi-credit-card-fill"
+									viewBox="0 0 16 16">
+									<path
+										d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v1H0zm0 3v5a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7zm3 2h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-1a1 1 0 0 1 1-1" />
+								</svg>
+								<!-- text  -->
+								<p class="nav-text">PAYMENT</p>
+							</div>
+						</a>
+					</ul>
+				</nav>
+			</header>
+
+			<section class="banner">
+				<div class="banner-up">
+					<div class="circle1 rightIntro"></div>
+					<div class="banner-image dropdown">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="16"
+							height="16"
+							fill="currentColor"
+							class="bi bi-coin"
+							viewBox="0 0 16 16">
+							<path
+								d="M5.5 9.511c.076.954.83 1.697 2.182 1.785V12h.6v-.709c1.4-.098 2.218-.846 2.218-1.932 0-.987-.626-1.496-1.745-1.76l-.473-.112V5.57c.6.068.982.396 1.074.85h1.052c-.076-.919-.864-1.638-2.126-1.716V4h-.6v.719c-1.195.117-2.01.836-2.01 1.853 0 .9.606 1.472 1.613 1.707l.397.098v2.034c-.615-.093-1.022-.43-1.114-.9zm2.177-2.166c-.59-.137-.91-.416-.91-.836 0-.47.345-.822.915-.925v1.76h-.005zm.692 1.193c.717.166 1.048.435 1.048.91 0 .542-.412.914-1.135.982V8.518z" />
+							<path
+								d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+							<path
+								d="M8 13.5a5.5 5.5 0 1 1 0-11 5.5 5.5 0 0 1 0 11m0 .5A6 6 0 1 0 8 2a6 6 0 0 0 0 12" />
+						</svg>
+					</div>
+
+					<div class="banner-text rightIntro">
+						<p class="write-up">
+							Tested
+							<span class="one"> and</span>
+							<span class="two"> Trusted!</span>
+						</p>
+
+						<div class="bottom">
+							<p>We accept:</p>
+							<div class="icons">
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="16"
+									height="16"
+									fill="currentColor"
+									class="bitcoin payment-icon"
+									viewBox="0 0 16 16">
+									<path
+										d="M5.5 13v1.25c0 .138.112.25.25.25h1a.25.25 0 0 0 .25-.25V13h.5v1.25c0 .138.112.25.25.25h1a.25.25 0 0 0 .25-.25V13h.084c1.992 0 3.416-1.033 3.416-2.82 0-1.502-1.007-2.323-2.186-2.44v-.088c.97-.242 1.683-.974 1.683-2.19C11.997 3.93 10.847 3 9.092 3H9V1.75a.25.25 0 0 0-.25-.25h-1a.25.25 0 0 0-.25.25V3h-.573V1.75a.25.25 0 0 0-.25-.25H5.75a.25.25 0 0 0-.25.25V3l-1.998.011a.25.25 0 0 0-.25.25v.989c0 .137.11.25.248.25l.755-.005a.75.75 0 0 1 .745.75v5.505a.75.75 0 0 1-.75.75l-.748.011a.25.25 0 0 0-.25.25v1c0 .138.112.25.25.25zm1.427-8.513h1.719c.906 0 1.438.498 1.438 1.312 0 .871-.575 1.362-1.877 1.362h-1.28zm0 4.051h1.84c1.137 0 1.756.58 1.756 1.524 0 .953-.626 1.45-2.158 1.45H6.927z" />
+								</svg>
+
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="16"
+									height="16"
+									fill="currentColor"
+									class="paypal payment-icon"
+									viewBox="0 0 16 16">
+									<path
+										d="M14.06 3.713c.12-1.071-.093-1.832-.702-2.526C12.628.356 11.312 0 9.626 0H4.734a.7.7 0 0 0-.691.59L2.005 13.509a.42.42 0 0 0 .415.486h2.756l-.202 1.28a.628.628 0 0 0 .62.726H8.14c.429 0 .793-.31.862-.731l.025-.13.48-3.043.03-.164.001-.007a.35.35 0 0 1 .348-.297h.38c1.266 0 2.425-.256 3.345-.91q.57-.403.993-1.005a4.94 4.94 0 0 0 .88-2.195c.242-1.246.13-2.356-.57-3.154a2.7 2.7 0 0 0-.76-.59l-.094-.061ZM6.543 8.82a.7.7 0 0 1 .321-.079H8.3c2.82 0 5.027-1.144 5.672-4.456l.003-.016q.326.186.548.438c.546.623.679 1.535.45 2.71-.272 1.397-.866 2.307-1.663 2.874-.802.57-1.842.815-3.043.815h-.38a.87.87 0 0 0-.863.734l-.03.164-.48 3.043-.024.13-.001.004a.35.35 0 0 1-.348.296H5.595a.106.106 0 0 1-.105-.123l.208-1.32z" />
+								</svg>
+
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="16"
+									height="16"
+									fill="currentColor"
+									class="card payment-icon"
+									viewBox="0 0 16 16">
+									<path
+										d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v1H0zm0 3v5a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7zm3 2h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-1a1 1 0 0 1 1-1" />
+								</svg>
+
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="16"
+									height="16"
+									fill="currentColor"
+									class="bank payment-icon"
+									viewBox="0 0 16 16">
+									<path
+										d="M8.277.084a.5.5 0 0 0-.554 0l-7.5 5A.5.5 0 0 0 .5 6h1.875v7H1.5a.5.5 0 0 0 0 1h13a.5.5 0 1 0 0-1h-.875V6H15.5a.5.5 0 0 0 .277-.916l-7.5-5zM12.375 6v7h-1.25V6h1.25zm-2.5 0v7h-1.25V6h1.25zm-2.5 0v7h-1.25V6h1.25zm-2.5 0v7h-1.25V6h1.25zM8 4a1 1 0 1 1 0-2 1 1 0 0 1 0 2zM.5 15a.5.5 0 0 0 0 1h15a.5.5 0 1 0 0-1H.5z" />
+								</svg>
+
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="16"
+									height="16"
+									fill="currentColor"
+									class="payment-icon apple"
+									viewBox="0 0 16 16">
+									<path
+										d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516s1.52.087 2.475-1.258.762-2.391.728-2.43m3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422s1.675-2.789 1.698-2.854-.597-.79-1.254-1.157a3.7 3.7 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56s.625 1.924 1.273 2.796c.576.984 1.34 1.667 1.659 1.899s1.219.386 1.843.067c.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758q.52-1.185.473-1.282" />
+									<path
+										d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516s1.52.087 2.475-1.258.762-2.391.728-2.43m3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422s1.675-2.789 1.698-2.854-.597-.79-1.254-1.157a3.7 3.7 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56s.625 1.924 1.273 2.796c.576.984 1.34 1.667 1.659 1.899s1.219.386 1.843.067c.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758q.52-1.185.473-1.282" />
+								</svg>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="banner-down"></div>
+			</section>
+
+			<section class="payment-form">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					width="16"
+					height="16"
+					fill="rgba(102, 255, 0, 0.5)"
+					class="shield circle2"
+					viewBox="0 0 16 16">
+					<path
+						d="M5.338 1.59a61 61 0 0 0-2.837.856.48.48 0 0 0-.328.39c-.554 4.157.726 7.19 2.253 9.188a10.7 10.7 0 0 0 2.287 2.233c.346.244.652.42.893.533q.18.085.293.118a1 1 0 0 0 .101.025 1 1 0 0 0 .1-.025q.114-.034.294-.118c.24-.113.547-.29.893-.533a10.7 10.7 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067c-.53 0-1.552.223-2.662.524zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.8 11.8 0 0 1-2.517 2.453 7 7 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7 7 0 0 1-1.048-.625 11.8 11.8 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 63 63 0 0 1 5.072.56" />
+					<path
+						d="M10.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0" />
+				</svg>
+				<div class="payment-div">
+					<div class="left">
+						<div class="upper">
+							<label for="Tracking ID">Tracking ID:</label>
+							<input
+								type="text"
+								name="Tracking ID"
+								id="track-ID"
+								placeholder="Input Tracking ID"
+								title="Your Tracking ID" />
+						</div>
+						<div class="upper">
+							<label for="payment-method"> Choose Method:</label>
+							<select
+								name="methods"
+								id="payment-method"
+								class="payment-method"
+								title="Payment Methods">
+								<option
+									value="bitcoin"
+									class="bitcoin">
+									Bitcoin
+								</option>
+								<option
+									value="paypal"
+									class="paypal">
+									Paypal
+								</option>
+								<option
+									value="bank"
+									class="bank">
+									Bank Transfer
+								</option>
+								<option
+									value="zelle"
+									class="zelle">
+									Zelle
+								</option>
+								<option
+									value="venmo"
+									class="venmo">
+									Venmo
+								</option>
+
+								<option
+									value="applepay"
+									class="apple-play">
+									Apple Pay
+								</option>
+
+								<option
+									value="chime"
+									class="chime">
+									Chime
+								</option>
+
+								<option
+									value="cashApp"
+									class="cashapp">
+									Cash App
+								</option>
+							</select>
+						</div>
+
+						<div id="description">Track Elite Shipments</div>
+
+						<button id="select">SELECT</button>
+					</div>
+					<div class="right">
+						<div class="overlay"></div>
+						<div class="contain">
+							<div class="upper">
+								<div class="oo">
+									<p class="label">Payment Details:</p>
+									<textarea
+										type="text"
+										name="details"
+										id="account-details"
+										placeholder="Loading..."
+										disabled="true"
+										class="details"
+										title="Payment Details"></textarea>
+									<p class="label">Payment Amount:</p>
+									<input
+										type="text"
+										name="details"
+										id="payment-amount"
+										placeholder="Amount Loading..."
+										disabled="true"
+										class="details"
+										value="Loading..."
+										title="Payment Amount" />
+								</div>
+								<div class="message">
+									<h3>GUIDELINE:</h3>
+									<p class="message-text">Loading...</p>
+								</div>
+							</div>
+							<diiv class="sender-info">
+								<div class="oo">
+									<p class="label">Payer Name:</p>
+									<input
+										type="text"
+										name="details"
+										id="sender-name"
+										placeholder="Sender Name"
+										class="sender-name"
+										title="Sender Name" />
+									<p class="label">Payer Phone number:</p>
+									<input
+										type="tel"
+										name="tel"
+										id="sender-tel"
+										placeholder="Sender Mobile No."
+										class="sender-tel"
+										title="Sender Tel" />
+								</div>
+							</diiv>
+							<!-- upload  -->
+							<div class="upload-div">
+								<p
+									class="label"
+									id="label">
+									Upload Reciept:
+								</p>
+								<div class="upload-pics">
+									<img
+										src="../src/svg/image.svg"
+										alt="Payment Proof"
+										id="proof" />
+									<button
+										id="upload"
+										title="Upload Proof">
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											width="16"
+											height="16"
+											fill="#0054ca"
+											class="bi bi-download"
+											viewBox="0 0 16 16">
+											<path
+												d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5" />
+											<path
+												d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z" />
+										</svg>
+									</button>
+									<input
+										value="UPLOAD"
+										type="file"
+										id="proof-input"
+										hidden />
+								</div>
+								<button
+									id="payment-btn"
+									title="Complete Payment">
+									DONE
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<footer>
+				<div class="copyright">
+					Copyright &copy; <span id="year">2024</span>
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>
+
+<script>
+	// copyright year update
+	window.addEventListener("DOMContentLoaded", () => {
+		let d = new Date();
+		const year = d.getFullYear();
+
+		let yearDiv = document.querySelector(".copyright span#year");
+		yearDiv.innerHTML = year;
+
+		if (!window.navigator.onLine) {
+			alert(`No internet Connection! Some features might not work...`);
+		}
+	});
+</script>
+<script
+	src="../js/payment.js"
+	type="module"></script>
+
+<script type="text/javascript">
+	function googleTranslateElementInit() {
+		const browserLanguage = navigator.language || navigator.languages[0];
+		new google.translate.TranslateElement(
+			{ pageLanguage: browserLanguage },
+			"google_translate_element"
+		);
+
+		console.log(browserLanguage);
+	}
+</script>
+
+<script
+	type="text/javascript"
+	src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>

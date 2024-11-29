@@ -1,0 +1,554 @@
+header p.welcome {
+	font-size: 40px;
+	line-height: 50px;
+	z-index: 999999999;
+	width: auto;
+	height: auto;
+	margin-top: 50px;
+	padding-left: 20px;
+	padding-bottom: 20px;
+}
+.welcome span {
+	color: #2680ff;
+	font-family: Poppins-Bold;
+}
+
+div.circle {
+	background: linear-gradient(
+		rgba(219, 148, 255, 0.449),
+		rgba(171, 211, 255, 0.272)
+	);
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	filter: blur(10px);
+	z-index: -99;
+	left: 20%;
+	top: 15%;
+}
+
+div.circle1 {
+	background: linear-gradient(
+		rgba(255, 221, 154, 0.449),
+		rgba(202, 255, 171, 0.3)
+	);
+	position: absolute;
+	width: 80px;
+	filter: blur(10px);
+	height: 80px;
+	border-radius: 50%;
+	z-index: -99;
+	right: 40%;
+	top: 20%;
+}
+
+div.circle2 {
+	background: linear-gradient(
+		rgba(235, 255, 147, 0.329),
+		rgba(255, 170, 170, 0.2)
+	);
+	position: absolute;
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	filter: blur(10px);
+	z-index: -99;
+	left: 20%;
+	top: 40%;
+}
+
+div.circle3 {
+	background: linear-gradient(
+		rgba(194, 255, 148, 0.449),
+		rgba(174, 255, 171, 0.272)
+	);
+	position: absolute;
+	width: 140px;
+	height: 140px;
+	border-radius: 50%;
+	z-index: -99;
+	filter: blur(10px);
+	left: 50%;
+	top: 70%;
+}
+
+div.circle4 {
+	background: linear-gradient(
+		rgba(186, 217, 255, 0.449),
+		rgba(174, 255, 171, 0.272)
+	);
+	position: absolute;
+	filter: blur(10px);
+	width: 160px;
+	height: 160px;
+	border-radius: 50%;
+	z-index: -99;
+	left: 10%;
+	top: 75%;
+}
+
+section.panel {
+	display: flex;
+	width: 100%;
+	height: auto;
+	max-height: 80vh;
+	flex-direction: row;
+	overflow: scroll;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	justify-content: center;
+}
+.panel .cont {
+	width: 100%;
+	display: flex;
+	place-content: center;
+	padding: 30px;
+}
+.panel div.admin-label {
+	width: 100%;
+	border: 4px solid rgba(220, 238, 255, 0.2);
+	height: 60px;
+	padding-inline: 5%;
+	display: flex;
+	background-color: rgba(255, 255, 255, 0.95);
+	backdrop-filter: blur(20px);
+	position: sticky;
+	top: 0;
+	margin: 10px;
+	justify-content: space-between;
+	align-items: center;
+	border-radius: 20px;
+	margin-top: 30px;
+	z-index: 999;
+}
+
+section.panel .admin-label h2 {
+	font-family: Poppins-Bold;
+	font-size: 5vmin;
+	line-height: 15px;
+}
+
+section.panel .admin-label .left {
+	display: flex;
+	gap: 10px;
+	align-items: center;
+}
+
+section.panel .admin-label button#logout {
+	width: 75px;
+	height: 28px;
+	text-align: center;
+	color: red;
+	border: 2px solid red;
+	border-radius: 10px;
+	background-color: white;
+	display: grid;
+	font-size: 14px;
+	align-items: center;
+	font-weight: bolder;
+	cursor: pointer;
+}
+
+.panel a.website {
+	font-size: 14px;
+	display: flex;
+	place-content: center;
+	align-items: center;
+	width: 90px;
+	font-family: Poppins-Bold;
+	height: 30px;
+	text-align: center;
+	color: #001327;
+	background-color: rgba(121, 168, 255, 0.158);
+	padding: 10px;
+	cursor: pointer;
+	border-radius: 10px;
+}
+
+.panel div.drop {
+	display: block;
+	margin-bottom: 20px;
+	margin-inline: 10px;
+	border-radius: 15px;
+	backdrop-filter: blur(20px);
+	width: 100%;
+	padding: 6px;
+	max-width: 500px;
+	box-shadow: 5px 10px 10px rgba(186, 203, 255, 0.178),
+		-1px -1px 20px rgba(217, 113, 255, 0.123);
+	height: 60px;
+	overflow: hidden;
+}
+
+.panel div.drop button {
+	cursor: pointer;
+}
+
+.panel div.password {
+	background: linear-gradient(
+		to left,
+		rgba(194, 239, 255, 0.144),
+		rgba(0, 126, 205, 0.1)
+	);
+	/* height: auto; */
+}
+
+.panel div.package {
+	background: linear-gradient(
+		to left,
+		rgba(242, 194, 255, 0.144),
+		rgba(205, 0, 219, 0.1)
+	);
+	/* height: auto; */
+}
+
+.panel div.view {
+	background: linear-gradient(
+		to left,
+		rgba(194, 255, 219, 0.144),
+		rgba(187, 225, 0, 0.1)
+	);
+	/* height: auto; */
+}
+
+.panel div.verify {
+	background: linear-gradient(
+		to left,
+		rgba(193, 239, 28, 0.144),
+		rgba(225, 0, 15, 0.1)
+	);
+	/* height: auto; */
+}
+
+div.drop .top {
+	width: 100%;
+	padding: 10px;
+	display: flex;
+	height: 50px;
+	justify-content: space-between;
+	border-radius: 15px;
+	border: 4px solid rgba(255, 255, 255, 0.6);
+	align-items: center;
+	padding-inline-end: 20px;
+	margin-bottom: 5px;
+	cursor: pointer;
+}
+
+.drop.payment {
+	align-items: center;
+	display: grid;
+	background: linear-gradient(
+		to left,
+		rgba(255, 201, 194, 0.144),
+		rgba(0, 33, 219, 0.1)
+	);
+}
+
+.drop.payment div.div {
+	width: 100%;
+}
+
+.drop .top h3 {
+	color: #001327;
+	font-family: Poppins-Bold;
+	letter-spacing: 0.5px;
+}
+.drop .top .arrow {
+	font-size: 20px;
+	font-family: Poppins-Bold;
+	color: #5f5f5f;
+}
+
+.input-div {
+	padding: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 5px;
+	flex-wrap: wrap;
+}
+
+.input-div input {
+	background-color: rgba(255, 255, 255, 0.539);
+	backdrop-filter: blur(10px);
+	border: 3px solid rgba(0, 100, 163, 0.144);
+	padding: 10px;
+	width: 40vmin;
+	max-width: 230px;
+	min-width: 200px;
+	border-radius: 15px;
+}
+.input-div input:focus {
+	border-color: #2680ff;
+}
+
+.package .input-div input:focus {
+	border-color: blueviolet;
+}
+
+.view .input-div input:focus {
+	border-color: rgb(141, 215, 29);
+}
+
+.input-div input:placeholder-shown {
+	font-size: 12px;
+	letter-spacing: 0.2px;
+}
+
+.input-div p {
+	width: 100%;
+	letter-spacing: 0.5px;
+	display: block;
+	text-align: center;
+	padding: 2px;
+	color: red;
+}
+
+.input-div p:not(.password) {
+	color: rgb(12, 192, 18);
+	font-family: Poppins-Bold;
+	letter-spacing: 1px;
+}
+
+.password .input-div button {
+	margin-top: 5px;
+	background-color: #005cdc5b;
+	color: white;
+	padding: 10px;
+	border: none;
+	width: 60%;
+	font-family: Poppins-Bold;
+	letter-spacing: 1px;
+	border-radius: 15px;
+}
+
+.package .input-div button {
+	background-color: rgba(137, 43, 226, 0.478);
+	color: white;
+	padding: 5px;
+	width: 250px;
+	border: none;
+	margin-inline: 10px;
+	margin-top: 10px;
+	border-radius: 10px;
+	font-family: Poppins-Bold;
+	letter-spacing: 1px;
+}
+
+div.view .details {
+	display: grid;
+	width: 100%;
+	overflow-y: scroll;
+}
+
+.view .details .upper {
+	display: flex;
+	margin-top: -10px;
+	flex-direction: column;
+	text-align: left;
+	margin-bottom: 10px;
+}
+
+.view .details .upper div {
+	border-bottom: 2px solid black;
+	height: 30px;
+	width: 100%;
+	margin-top: 10px;
+	align-items: center;
+	display: flex;
+	justify-content: left;
+	text-align: left;
+}
+
+.view .upper .uID input.id {
+	margin-inline-end: 42%;
+}
+
+.view .uID span {
+	background-color: rgb(106, 0, 255);
+	color: white;
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	display: grid;
+	place-content: center;
+	margin-bottom: 5px;
+	cursor: pointer;
+}
+
+.view .details .upper div p {
+	width: 100%;
+	text-align: left;
+	padding-left: 10px;
+}
+
+.view .details .upper input {
+	background-color: transparent;
+	backdrop-filter: blur(0px);
+	border: none;
+}
+
+.view .details .buttons {
+	display: flex;
+	place-content: center;
+	justify-content: space-between;
+	padding-inline: 10%;
+}
+
+.view .details button {
+	width: 45%;
+	padding: 2px;
+	background-color: rgb(106, 0, 255);
+	color: white;
+	border: none;
+	border-radius: 10px;
+	place-self: center;
+	height: 30px;
+}
+
+.view .buttons #delete-package {
+	background-color: red;
+}
+
+.drop.payment .input-div {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.drop.payment .input-div .div input {
+	width: 75%;
+	max-width: 500px;
+	padding: 8px;
+}
+
+.drop.payment .input-div .div button {
+	width: 20%;
+	background-color: rgb(90, 118, 255);
+	color: white;
+	padding: 4px;
+	border: none;
+	border-radius: 10px;
+	font-size: 12px;
+	height: 35px;
+	align-items: center;
+}
+
+.panel .verify .input-div {
+	display: flex;
+	align-items: center;
+	padding: 0px;
+}
+
+.panel .verify .input-div .reciepts {
+	width: 200px;
+	border: 2px solid black;
+	height: 250px;
+	padding: 2px;
+	overflow: hidden;
+	border-radius: 15px;
+}
+
+.input-div .reciepts img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	display: flex;
+}
+
+.input-div .details {
+	display: grid;
+	width: 55%;
+	height: 280px;
+	padding-top: 10px;
+	margin-left: 5px;
+}
+
+.verify .input-div .upper,
+.verify .lower {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+}
+
+.verify .input-div .upper div,
+.verify .lower div {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	padding-top: 5px;
+	height: 30px;
+	border-bottom: 1px solid black;
+}
+
+.verify .input-div .upper label,
+.verify .lower label {
+	font-weight: bold;
+	letter-spacing: 0.5px;
+	font-size: 11px;
+}
+
+.verify .input-div .upper p,
+.verify .lower p {
+	display: flex;
+	flex-wrap: wrap;
+	width: auto;
+	height: 20px;
+	padding-inline-start: 10px;
+	color: rgb(55, 55, 55);
+	font-weight: bolder;
+	font-size: 12px;
+	user-select: text;
+	overflow-x: scroll;
+}
+
+.verify .input-div .lower .success input,
+.verify .input-div .upper input {
+	width: 55%;
+
+	height: 30px;
+	border-radius: 10px;
+	padding-bottom: 10px;
+	border: none;
+	background-color: transparent;
+	backdrop-filter: blur(0px);
+}
+
+.verify .input-div .upper span {
+	width: 25px;
+	height: 25px;
+	background-color: #3d75c5;
+	color: white;
+	margin-inline-start: 15px;
+	padding-block: 5px;
+	display: grid;
+	place-content: center;
+	cursor: pointer;
+	border-radius: 15px;
+	margin-bottom: 8px;
+}
+
+.verify .input-div button {
+	width: 80%;
+	background-color: #10a115;
+	color: white;
+	border-radius: 15px;
+	border: none;
+	height: 30px;
+	display: block;
+	place-self: center;
+}
+
+.visitors #visitors-div div, .paymentNotif #notification-div div {
+	padding: 5px;
+	font-size: small;
+	background-color: rgba(137, 247, 27, 0.174);
+	border-radius: 15px;
+	width: 100%;
+	height: max-content;
+	margin-bottom: 5px;
+	padding-inline: 10px;
+	border: 1px solid rgba(200, 200, 200, 0.2);
+}

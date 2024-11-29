@@ -1,14 +1,15 @@
-* {
+html * {
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
-	font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-		"Lucida Sans", Arial, sans-serif;
+	font-family: "Poppins", serif;
 	color: black;
 	outline: none;
 	text-decoration: none;
 	list-style: none;
 	transition: all ease-in-out 500ms;
+	scroll-behavior: smooth;
+	scroll-margin-top: 200px;
 }
 
 body {
@@ -22,6 +23,8 @@ body {
 	height: 100vh;
 	user-select: none;
 	justify-content: center;
+	overflow: hidden;
+	transition: all ease-in-out 500ms;
 }
 
 div.body-div {
@@ -31,6 +34,7 @@ div.body-div {
 	flex-direction: column;
 	overflow: auto;
 	overflow-x: hidden;
+	padding-bottom: 30px;
 }
 
 header {
@@ -45,11 +49,11 @@ header {
 	top: 0;
 	padding-top: 30px;
 	color: #4588e6;
-	background-color: rgba(250, 250, 250, 0.98);
+	background-color: rgba(255, 255, 255, 0.98);
 	backdrop-filter: blur(70px) brightness(70%);
 	/* filter:sepia(70); */
 	/* border: 1px solid #0054ca; */
-	z-index: 99999;
+	z-index: 99;
 }
 
 header div.logoDiv {
@@ -93,15 +97,15 @@ div.logo-name {
 }
 
 header div.logoDiv div.logo-name h1 {
-	width: 150px;
+	width: 200px;
 	font-size: 30px;
 	color: #0054ca;
+	font-weight: bold;
 	line-height: 25px;
 }
 
 header div.logoDiv h1 span {
 	color: #0054ca8c;
-	font-weight: lighter;
 }
 
 div.logo-name p.shipment {
@@ -109,13 +113,14 @@ div.logo-name p.shipment {
 	display: flex;
 	color: #0054ca;
 	text-align: center;
-	place-content: center;
 	letter-spacing: 5px;
 	padding-top: 2px;
+	padding-left: 5px;
 	font-size: 14px;
+	font-weight: bold;
 }
 header nav.web-menu {
-	height: 80px;
+	height: max-content;
 	display: flex;
 	align-items: center;
 	padding-inline-end: 20px;
@@ -184,28 +189,114 @@ nav ul a p {
 	color: #0054ca;
 }
 
-/* media query  */
-@media screen and (max-width: 680px) {
-	/* nav.web-menu {
-    display: grid;
-    width: 50px;
-    height: 50px;
-    border: 1px solid #0054ca;
-    overflow: hidden;
-    place-content: center;
-  }*/
+footer {
+	width: 100%;
+	height: max-content;
+	padding: 10px;
+	display: grid;
+	place-content: center;
+	text-align: center;
+	margin-top: 50px;
+}
 
+footer .copyright {
+	letter-spacing: 3px;
+	color: rgb(70, 70, 70);
+	padding: 20px;
+}
+
+footer .copyright #year {
+	font-weight: bold;
+	font-family: Poppins-Bold;
+	color: rgb(70, 70, 70);
+}
+
+div.circle {
+	background: linear-gradient(
+		rgba(219, 148, 255, 0.449),
+		rgba(171, 211, 255, 0.272)
+	);
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	filter: blur(10px);
+	z-index: -99;
+	left: 20%;
+	top: 15%;
+}
+
+div.circle1 {
+	background: linear-gradient(
+		rgba(255, 221, 154, 0.449),
+		rgba(202, 255, 171, 0.3)
+	);
+	position: absolute;
+	width: 80px;
+	filter: blur(10px);
+	height: 80px;
+	border-radius: 50%;
+	z-index: -99;
+	right: 40%;
+	top: 20%;
+}
+
+div.circle2 {
+	background: linear-gradient(
+		rgba(235, 255, 147, 0.329),
+		rgba(255, 170, 170, 0.2)
+	);
+	position: absolute;
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	filter: blur(10px);
+	z-index: -99;
+	left: 20%;
+	top: 40%;
+}
+
+div.circle3 {
+	background: linear-gradient(
+		rgba(194, 255, 148, 0.449),
+		rgba(174, 255, 171, 0.272)
+	);
+	position: absolute;
+	width: 140px;
+	height: 140px;
+	border-radius: 50%;
+	z-index: -99;
+	filter: blur(10px);
+	left: 70%;
+	top: 55%;
+}
+
+div.circle4 {
+	background: linear-gradient(
+		rgba(186, 217, 255, 0.449),
+		rgba(174, 255, 171, 0.272)
+	);
+	position: absolute;
+	filter: blur(10px);
+	width: 160px;
+	height: 160px;
+	border-radius: 50%;
+	z-index: -99;
+	left: 10%;
+	top: 75%;
+}
+
+/* media query  */
+@media screen and (max-width: 400px) {
+	.admin-logo-div .logo {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 680px) {
 	nav.web-menu div.menu-div {
 		display: grid;
 		width: max-content;
-	}
-
-	nav ul.ls-ul {
-		display: none;
-	}
-
-	ul.drop-down-menu {
-		display: none;
 	}
 
 	nav.web-menu:hover {

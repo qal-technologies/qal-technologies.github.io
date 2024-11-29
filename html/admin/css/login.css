@@ -1,0 +1,200 @@
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+}
+
+div.admin-logo-div {
+	width: 100%;
+	min-width: 360px;
+	min-height: 200px;
+	place-self: center;
+	place-content: center;
+	display: flex;
+	margin-bottom: 10px;
+}
+div.admin-logo-div .inner-logo {
+	width: 60%;
+	max-width: 350px;
+	display: flex;
+	align-items: center;
+	border-radius: 20px;
+	place-self: center;
+}
+
+.admin-logo-div .logo {
+	padding-left: 10px;
+	display: grid;
+	width: 80px;
+	align-self: center;
+	height: 80px;
+	place-content: center;
+}
+
+.admin-logo-div .logo svg.logo-plane {
+	transform: rotate(-45deg);
+	fill: #0054ca;
+	width: 80px;
+	height: 80px;
+}
+
+.inner-logo .admin-logo-name {
+	display: flex;
+	flex-direction: column;
+	border-left: 3px solid #0054ca;
+	height: 60px;
+	padding-left: 15px;
+	padding-top: 10px;
+	text-align: left;
+	color: #0054ca;
+	justify-content: center;
+}
+
+.admin-logo-name h1 {
+	font-family: Poppins-Bold;
+	letter-spacing: 1px;
+	width: 100%;
+	font-size: 30px;
+	line-height: 22px;
+	padding-block: 6px;
+}
+
+.admin-logo-name h1 span {
+	font-family: Poppins-Bold;
+	color: #649ff0;
+}
+
+.admin-logo-name p {
+	padding-left: 5px;
+	line-height: 22px;
+	letter-spacing: 10px;
+	color: #0054ca;
+}
+
+form#admin-login {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+#admin-login div {
+	display: grid;
+	width: 90%;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+#admin-login div input:not(#admin-submit) {
+	width: 80%;
+	max-width: 350px;
+	padding: 10px;
+	place-self: center;
+	border: 3px solid #d3e5ff;
+	background-color: rgb(255, 255, 255, 0.5);
+	backdrop-filter: blur(15px);
+	border-radius: 15px;
+	letter-spacing: 0.5px;
+	margin-bottom: 2px;
+}
+
+#admin-login div input:not(#admin-submit):focus {
+	border: 3px solid #0054ca;
+}
+
+#admin-login div p {
+	letter-spacing: 1px;
+	color: red;
+}
+
+#admin-login #admin-submit {
+	margin-top: 25px;
+	width: 45%;
+	place-self: center;
+	border: none;
+	background-color: #0054ca;
+	color: white;
+	font-family: Poppins-Bold;
+	padding: 10px;
+	letter-spacing: 1px;
+	border-radius: 20px;
+	max-width: 250px;
+}
+
+div.circle {
+	background: linear-gradient(
+		rgba(219, 148, 255, 0.449),
+		rgba(171, 211, 255, 0.272)
+	);
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	filter: blur(10px);
+	z-index: -99;
+	left: 20%;
+	top: 15%;
+}
+
+div.circle1 {
+	background: linear-gradient(
+		rgba(255, 221, 154, 0.449),
+		rgba(202, 255, 171, 0.3)
+	);
+	position: absolute;
+	width: 80px;
+	filter: blur(10px);
+	height: 80px;
+	border-radius: 50%;
+	z-index: -99;
+	right: 40%;
+	top: 20%;
+}
+
+div.circle2 {
+	background: linear-gradient(
+		rgba(235, 255, 147, 0.329),
+		rgba(255, 170, 170, 0.2)
+	);
+	position: absolute;
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	filter: blur(10px);
+	z-index: -99;
+	left: 20%;
+	top: 40%;
+}
+
+div.circle3 {
+	background: linear-gradient(
+		rgba(194, 255, 148, 0.449),
+		rgba(174, 255, 171, 0.272)
+	);
+	position: absolute;
+	width: 140px;
+	height: 140px;
+	border-radius: 50%;
+	z-index: -99;
+	filter: blur(10px);
+	left: 70%;
+	top: 55%;
+}
+
+div.circle4 {
+	background: linear-gradient(
+		rgba(186, 217, 255, 0.449),
+		rgba(174, 255, 171, 0.272)
+	);
+	position: absolute;
+	filter: blur(10px);
+	width: 160px;
+	height: 160px;
+	border-radius: 50%;
+	z-index: -99;
+	left: 10%;
+	top: 75%;
+}

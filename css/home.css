@@ -22,7 +22,7 @@ section.web-banner {
 	position: absolute;
 	background: linear-gradient(
 		rgba(255, 255, 255, 0.5),
-		rgba(255, 232, 128, 0.5)
+		rgba(255, 230, 117, 0.5)
 	);
 	width: 55vmin;
 	padding: 20px;
@@ -30,6 +30,7 @@ section.web-banner {
 	height: 55vmin;
 	z-index: -999;
 	top: -15vmin;
+	filter: blur(20px);
 }
 
 .banner-up div.banner-text {
@@ -43,7 +44,8 @@ div.banner-text p:first-child {
 	font-size: 15vmin;
 	color: #0054ca;
 	line-height: 70%;
-	letter-spacing: 2px;
+	letter-spacing: 4px;
+	font-family: Poppins-Bold;
 }
 
 .banner-text p span.one {
@@ -53,12 +55,14 @@ div.banner-text p:first-child {
 
 .banner-text p span.two {
 	color: #0054ca;
+	font-family: Poppins-Bold;
 }
 
 .banner-text p.motto {
 	font-size: 3vmin;
 	letter-spacing: 2px;
 	color: #3c70be;
+	font-family: Arial, Helvetica, sans-serif;
 }
 
 .banner-up .banner-image {
@@ -78,6 +82,7 @@ div.banner-text p:first-child {
 	display: flex;
 	place-content: center;
 	gap: 20px;
+	position: relative;
 	align-items: center;
 }
 
@@ -93,16 +98,20 @@ div.banner-text p:first-child {
 	backdrop-filter: blur(20px);
 	padding: 10px;
 	font-family: "Courier New", Courier, monospace;
+	font-family: Poppins-Bold;
+	font-size: large;
 	letter-spacing: 2px;
 	color: #0054ca;
-	font-weight: bolder;
+	font-weight: bold;
 	user-select: text;
 }
 
 .banner-down input::placeholder {
 	color: #0066ffa0;
 	letter-spacing: 2px;
-	font-weight: bolder;
+	font-family: Poppins;
+	user-select: none;
+	font-size: small;
 }
 
 .banner-down input:focus {
@@ -118,19 +127,211 @@ div.banner-text p:first-child {
 	background-color: #0054ca;
 }
 
+.banner-down button svg {
+	fill: white;
+}
+
 .banner-down button:hover {
 	transform: scale(110%);
 }
 
+div#tracking-Div {
+	margin-top: 1%;
+	background-color: rgba(255, 255, 255, 0.362);
+	display: none;
+	width: 90%;
+	place-self: center;
+	backdrop-filter: blur(20px);
+	box-shadow: 0px 0px 20px rgba(106, 141, 160, 0.23);
+	border-radius: 30px;
+	height: auto;
+	padding: 15px;
+	place-content: center;
+	text-align: center;
+}
+
+div#tracking-Div .main {
+	width: 100%;
+	display: grid;
+	gap: 5px;
+	align-items: center;
+}
+
+#tracking-Div .main .upper {
+	margin-top: 10px;
+	display: flex;
+	flex-wrap: wrap;
+	width: 80vmin;
+	place-self: center;
+	border: 1px solid rgba(152, 198, 219, 0.427);
+	height: auto;
+	min-height: 60px;
+	min-width: 200px;
+	padding: 10px;
+	padding-inline: 15px;
+	border-radius: 20px;
+	align-items: center;
+	justify-content: space-between;
+	text-align: left;
+	gap: 10px;
+}
+
+#tracking-Div .main .upper span {
+	color: #0054ca;
+	user-select: text;
+}
+
+.main .upper span h6 {
+	user-select: none;
+	color: black;
+	font-family: Poppins-Bold;
+	letter-spacing: 1.5px;
+}
+
+.main .lower {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	width: 100%;
+	justify-content: center;
+	margin-top: 15px;
+	gap: 10px;
+}
+
+.main .lower div.trail {
+	display: flex;
+	width: 100%;
+	align-items: center;
+	justify-content: space-between;
+	max-width: 400px;
+	height: max-content;
+	column-gap: 10px;
+	overflow: hidden;
+}
+
+.main .lower.arrive {
+	display: grid;
+	margin-top: 10%;
+}
+
+.main .lower.arrive svg.globe {
+	width: 40%;
+	height: 40%;
+	animation: rotate 10s ease-in 100ms infinite forwards;
+}
+
+.main .lower div.trail div.svg {
+	display: grid;
+	place-content: center;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+}
+
+.main .lower svg {
+	width: 60px;
+	height: 60px;
+}
+
+.main .lower svg:not(.from) {
+	fill: #0054ca;
+}
+
+.main .lower div.current {
+	border: 2px solid #0054cabb;
+	border-radius: 30px;
+	background-color: #c9e0ff2c;
+	height: 70px;
+	padding-inline-end: 20px;
+	place-self: center;
+	animation: shake 2s ease 200ms infinite forwards;
+}
+
+.main .lower svg.country {
+	animation: rotate 5s ease 100ms infinite forwards;
+}
+
+.main .lower div.duration {
+	width: 90%;
+	height: 80px;
+	border: 1px solid #0054ca;
+	border-radius: 20px;
+}
+
+.main .lower svg.driver {
+	animation: drive 2s ease-in-out 300ms infinite forwards;
+}
+
+.main .lower svg#location {
+	fill: rgb(27, 107, 218);
+	width: 45px;
+	height: 45px;
+	animation: blink 1.5s ease-in 100ms infinite backwards;
+}
+
+.main .lower.arrive div.message {
+	font-size: 16px;
+	letter-spacing: 1px;
+	color: #0054ca;
+	font-weight: bolder;
+	margin-bottom: 20px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.main .lower div.current div.text-upper {
+	font-size: 12px;
+	margin-left: -20px;
+}
+
+.main .lower div.current p.text-lower {
+	margin-left: -20px;
+	font-size: 20px;
+}
+
+.main .lower div.text {
+	width: 80%;
+	display: grid;
+	text-align: left;
+}
+
+.main .lower .text div.text-upper {
+	font-family: Poppins-Bold;
+	font-size: 18px;
+	letter-spacing: 1px;
+	border: none;
+	color: #0054ca;
+}
+
+.main .lower .text p.text-lower {
+	letter-spacing: 1px;
+	font-size: 25px;
+}
+
+#tracking-Div span.highlight {
+	color: #0054ca;
+	font-family: Poppins-Bold;
+}
+
 section.intro {
-	display: block;
+	display: flex;
 	width: 100%;
 	height: max-content;
-	min-height: 400px;
 	align-items: center;
 	justify-content: center;
 	text-align: center;
+	row-gap: 10%;
+	padding-block: 50px;
+	padding-bottom: 150px;
 	position: relative;
+	flex-wrap: wrap;
+}
+
+section.intro div.intro-div {
+	width: 48%;
+	min-width: 300px;
+	align-items: center;
+	place-self: center;
 }
 
 .intro div.first {
@@ -139,6 +340,8 @@ section.intro {
 	justify-content: center;
 	align-items: center;
 	height: 80%;
+	column-gap: 15px;
+	row-gap: 40px;
 }
 
 .intro div.circle {
@@ -146,8 +349,8 @@ section.intro {
 	position: absolute;
 	background: linear-gradient(
 		to right,
-		rgba(174, 235, 255, 0.14),
-		rgba(241, 119, 255, 0.23)
+		rgba(174, 235, 255, 0.4),
+		rgba(241, 119, 255, 0.3)
 	);
 	width: 45vmin;
 	padding: 20px;
@@ -156,29 +359,39 @@ section.intro {
 	z-index: -999;
 	right: -20vmin;
 	bottom: 0;
+	filter: blur(20px);
 }
 
 .intro .intro-image {
-	width: 40vmin;
-	height: 40vmin;
-	/* overflow: hidden; */
+	width: 32vmin;
+	height: 32vmin;
 	display: grid;
 	place-content: center;
 }
 
 .intro .intro-image svg {
 	fill: #0054ca;
-	height: 40vmin;
+	height: 35vmin;
 	min-height: 200px;
-	max-height: 400px;
-	width: 40vmin;
+	max-height: 300px;
+	width: 35vmin;
 	min-width: 200px;
-	max-width: 400px;
+	max-width: 300px;
+}
+
+.intro-2 .intro-image svg {
+	width: 18vmin;
+	max-width: 300px;
+	min-width: 150px;
+	height: 18vmin;
+	max-height: 300px;
+	min-height: 150px;
 }
 
 div.intro-text {
-	font-size: 30px;
-	width: 50vmin;
+	display: grid;
+	font-size: 4vmin;
+	width: 45vmin;
 	min-width: 200px;
 	height: max-content;
 	padding: 10px;
@@ -187,7 +400,8 @@ div.intro-text {
 }
 
 .intro-text span {
-	font-weight: bolder;
+	font-weight: bold;
+	font-family: Poppins-Bold;
 	letter-spacing: 0.5px;
 }
 
@@ -199,21 +413,312 @@ div.intro-text {
 	color: rgb(28, 185, 206);
 }
 
+.intro-2 .intro-text a.button,
+.main .lower.arrive a.payment-button {
+	font-size: 18px;
+	width: 90%;
+	padding: 2px;
+	display: flex;
+	border: 4px solid #006aff;
+	cursor: pointer;
+	margin-top: 10px;
+	color: rgb(55, 55, 55);
+	align-items: center;
+	min-width: 200px;
+	max-width: 225px;
+	border-radius: 15px;
+	gap: 10px;
+	padding-inline-start: 10px;
+}
+
+.main .lower.arrive a.payment-button {
+	max-width: 75%;
+	place-content: center;
+	gap: 10px;
+	display: flex;
+	place-self: center;
+	align-items: center;
+	color: #0054ca;
+	padding-left: 10px;
+}
+.main .lower.arrive a.payment-button div.svg {
+	display: grid;
+	place-content: center;
+}
+.main .lower.arrive a.payment-button p {
+	color: #0054ca;
+	font-weight: bolder;
+	letter-spacing: 0.5px;
+}
+
+.intro-2 .intro-text a.button:hover {
+	color: black;
+	border-color: #0054ca;
+}
+
+.intro-2
+	.intro-text
+	a.button
+	.svg
+	.main
+	.lower.arrive
+	a.payment-button
+	div.svg {
+	width: 30px;
+	height: 30px;
+	margin-right: 10px;
+	border: none;
+	display: grid;
+	place-content: center;
+	padding: 5px;
+	align-items: center;
+	border-radius: 10px;
+}
+
+.intro-2 .intro-text a.button svg,
+.main .lower.arrive a.payment-button svg {
+	width: 25px;
+	height: 25px;
+	fill: #006aff;
+}
+
+.intro-2 .intro-text a.button p {
+	color: #006aff;
+	font-family: Poppins-Bold;
+	letter-spacing: 1px;
+	font-size: 16px;
+}
+
+.intro-2 .intro-text a:not(.button) {
+	text-decoration: underline;
+	font-family: Poppins-Bold;
+}
+
+.intro-2 .intro-text a.bitcoin {
+	color: orange;
+}
+
+.intro-2 .intro-text a.paypal {
+	color: blue;
+}
+
+.intro-2 .intro-text a.zelle {
+	color: rgb(46, 201, 14);
+}
+
 .intro div.info {
 	place-content: center;
 	flex-wrap: wrap;
 	padding: 10px;
+	padding-inline: 20px;
 	width: 100%;
 	height: max-content;
-	/* margin-top: -10%; */
+	/* margin-top: -5%; */
 	color: rgb(150, 150, 150);
-	font-weight: lighter;
-	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	letter-spacing: 0.5px;
 }
 
 .intro div.info span.highlight {
 	color: rgb(129, 28, 206, 0.5);
+	font-weight: bold;
+	font-family: Poppins-Bold;
+}
+
+section.info {
+	display: flex;
+	padding: 10px;
+	flex-wrap: wrap;
+	gap: 20px;
+	column-gap: 10%;
+	align-items: center;
+	justify-content: center;
+}
+
+.info div#about,
+.info div#service {
+	width: 100%;
+	max-width: 500px;
+	display: flex;
+	gap: 10px;
+	column-gap: 2%;
+	flex-wrap: wrap;
+	height: auto;
+	min-height: 200px;
+	max-height: 400px;
+	align-items: center;
+	justify-content: center;
+	background-color: rgba(210, 210, 210, 0.3);
+	padding-inline: 40px;
+	border-radius: 20vw;
+	column-gap: 10%;
+}
+
+.info div#about {
+	background: linear-gradient(
+		to right,
+		rgba(239, 216, 255, 0.1),
+		rgba(190, 85, 255, 0.15)
+	);
+	filter: drop-shadow(0px 0px 10px rgba(211, 140, 255, 0.3));
+	padding-inline-end: 10px;
+	place-content: center;
+}
+
+.info div#service {
+	background: rgba(109, 204, 255, 0.2);
+	background: linear-gradient(
+		to left,
+		rgba(255, 247, 176, 0.1),
+		rgba(255, 209, 24, 0.15)
+	);
+	filter: drop-shadow(0px 0px 10px rgba(255, 241, 85, 0.5));
+	padding-inline-start: 10px;
+}
+
+.info div#about .inner,
+.info div#service .inner {
+	display: block;
+	width: 50%;
+	max-width: 500px;
+}
+
+section.info div .svg-pointer svg {
+	fill: #0054ca;
+	height: 30vmin;
+	min-height: 100px;
+	max-height: 150px;
+	width: 30vmin;
+	min-width: 100px;
+	max-width: 150px;
+}
+
+.inner h2 {
 	font-weight: bolder;
-	font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-		"Lucida Sans", Arial, sans-serif;
+	font-size: 25px;
+	padding-bottom: 8px;
+	line-height: 25px;
+	letter-spacing: 1px;
+}
+
+.inner p {
+	font-size: 15px;
+	letter-spacing: 0.3px;
+	user-select: text;
+	line-height: 18px;
+}
+
+.inner span.highlight {
+	color: #0054ca;
+	font-size: 18px;
+}
+
+.inner span.bold {
+	font-weight: bold;
+	font-family: Poppins-Bold;
+}
+
+section.image-reviews {
+	display: grid;
+	width: max-content;
+	max-width: 90%;
+	height: 420px;
+	padding: 20px;
+	margin-top: 20px;
+	background-color: rgba(238, 248, 255, 0.3);
+	border-radius: 30px;
+	place-self: center;
+	box-shadow: 0px 0px 20px rgba(213, 213, 213, 0.447);
+	justify-content: center;
+}
+
+.image-reviews h3 {
+	width: 100%;
+	font-size: 20px;
+	letter-spacing: 2px;
+	font-weight: bolder;
+	text-align: center;
+	padding-bottom: 10px;
+}
+
+.image-reviews div.image-slide {
+	width: 100%;
+	height: 350px;
+	display: flex;
+	gap: 10px;
+	flex-direction: row;
+	overflow: hidden;
+	overflow-x: scroll;
+	border-radius: 20px;
+	align-items: center;
+}
+
+.image-reviews .image-slide div.image-div {
+	min-width: 200px;
+	height: 320px;
+	max-width: 250px;
+	border-radius: 20px;
+	overflow: hidden;
+}
+
+.image-reviews .image-slide img {
+	width: 100%;
+	height: 100%;
+	object-fit: fill;
+}
+
+@keyframes shake {
+	0% {
+		margin-bottom: 10px;
+		margin-top: 0px;
+	}
+
+	50% {
+		margin-top: 0px;
+		margin-bottom: 10px;
+	}
+
+	100% {
+		margin-top: 10px;
+		margin-bottom: 0px;
+	}
+}
+
+@keyframes blink {
+	0% {
+		fill: #0054ca;
+		transform: scale(100%);
+	}
+	100% {
+		transform: scale(80%);
+	}
+}
+
+@keyframes rotate {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes drive {
+	0% {
+		margin-left: 0%;
+	}
+
+	100% {
+		margin-left: 30%;
+	}
+}
+
+@media screen and (max-width: 700px) {
+	nav ul.ls-ul a:not(.payment) {
+		display: none;
+	}
+
+	nav ul.ls-ul a.payment p {
+		display: none;
+	}
 }
